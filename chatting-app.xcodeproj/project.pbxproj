@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		91A3BFA22EE3CAB100A7ED28 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 91A3BFA12EE3CAB100A7ED28 /* Fakery */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		91B815752EC2235F00A70D5B /* chatting-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chatting-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A3BFA22EE3CAB100A7ED28 /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "chatting-app";
 			packageProductDependencies = (
+				91A3BFA12EE3CAB100A7ED28 /* Fakery */,
 			);
 			productName = "chatting-app";
 			productReference = 91B815752EC2235F00A70D5B /* chatting-app.app */;
@@ -78,7 +84,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2610;
-				LastUpgradeCheck = 2610;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					91B815742EC2235F00A70D5B = {
 						CreatedOnToolsVersion = 26.1;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 91B8156C2EC2235F00A70D5B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				91A3BFA02EE3CAB100A7ED28 /* XCRemoteSwiftPackageReference "Fakery" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 91B815762EC2235F00A70D5B /* Products */;
 			projectDirPath = "";
@@ -183,6 +192,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -239,6 +249,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -328,6 +339,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91A3BFA02EE3CAB100A7ED28 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91A3BFA12EE3CAB100A7ED28 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91A3BFA02EE3CAB100A7ED28 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91B8156D2EC2235F00A70D5B /* Project object */;
 }
