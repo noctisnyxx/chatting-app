@@ -1,18 +1,40 @@
 //
-//  ChatMessageRow.swift
+//  ChatBubble.swift
 //  chatting-app
 //
 //  Created by Dinar Hadiyanto on 25/12/25.
 //
 
 import SwiftUI
+import Fakery
 
-struct ChatMessageRow: View {
+let faker = Faker()
+
+struct ChatBubble: View {
+    let msg:String
+    let mine:Bool
+    let color:Color
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(msg)
+            .font(.caption)
+            .multilineTextAlignment(.leading)
+            .foregroundStyle(Color(.white))
+            .padding(8)
+            .fixedSize(horizontal: false, vertical: true)
+            .background(
+                RoundedRectangle(cornerRadius: 7)
+                    .fill(color)
+            )
+            .frame(
+                maxWidth: 240,
+                alignment: mine ? .trailing : .leading)
     }
 }
 
 #Preview {
-    ChatMessageRow()
+    ChatBubble(
+        msg:faker.lorem.characters(amount: 10),
+        mine: Bool.random(),
+        color:.blue
+    )
 }

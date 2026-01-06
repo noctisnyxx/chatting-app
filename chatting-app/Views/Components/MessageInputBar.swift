@@ -12,15 +12,14 @@ struct MaxCharacterStatus{
 }
 struct MessageInputContent: View{
     @State private var msg:String = ""
-    let maxChars = 1200
     var charLeft: Int {
-        maxChars - msg.count
+        AppConfig.maxMessageLength - msg.count
     }
     var currentStatus: MaxCharacterStatus{
-        let opacity = Double(msg.count) / Double(maxChars)
-        if Double(charLeft) < Double(maxChars)*0.1{
+        let opacity = Double(msg.count) / Double(AppConfig.maxMessageLength)
+        if Double(charLeft) < Double(AppConfig.maxMessageLength)*0.1{
             return MaxCharacterStatus(color: .red, opacity: opacity)
-        }else if Double(charLeft) < Double(maxChars)*0.5{
+        }else if Double(charLeft) < Double(AppConfig.maxMessageLength)*0.5{
             return MaxCharacterStatus(color: .orange, opacity: opacity)
         }else{
             return MaxCharacterStatus(color: .gray, opacity: opacity)

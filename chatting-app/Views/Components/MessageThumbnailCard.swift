@@ -1,3 +1,12 @@
+//
+//  MessageThumbnailCard.swift
+//  chatting-app
+//
+//  Created by Dinar Hadiyanto on 07/01/26.
+//
+
+import SwiftUI
+
 struct MessageThumbnailCard: View{
     let msgMeta: MessageCover
     var avatarURL = "https://avatar.iran.liara.run/public"
