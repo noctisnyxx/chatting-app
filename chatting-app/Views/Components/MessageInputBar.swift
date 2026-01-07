@@ -38,7 +38,7 @@ struct MessageInputContent: View{
                     text: $msg,
                     axis: .vertical
                 )
-                .font(.caption)
+                .font(AppConfig.Typography.messageBody)
                 .lineLimit(10)
                 .scrollIndicators(.visible)
                 .padding(5)
@@ -60,9 +60,9 @@ struct MessageInputContent: View{
                 .padding(.top, 5)
                 .padding(.horizontal,65)
         }
-        .padding(.top, 20)
-        .padding(.bottom, 5)
-        .background(.ultraThinMaterial)
+        .padding(.top, 10)
+        .padding(.bottom, 35)
+        .background(.ultraThinMaterial.opacity(0.3))
     }
 }
 

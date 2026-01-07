@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Fakery
 
+let faker = Faker()
 
 struct Message{
     let id:UUID
@@ -27,4 +29,16 @@ struct MessageCover: Identifiable {
     let id = UUID()
     let name: String
     let lastMessage: String
+}
+
+extension MessageBubble {
+    static func dummyList(count: Int) -> [MessageBubble] {
+        (0..<count).map { i in
+            MessageBubble(
+                id: UUID(),
+                message: faker.lorem.sentence(wordsAmount: Int.random(in: 5...72)),
+                mine: Bool.random()
+            )
+        }
+    }
 }

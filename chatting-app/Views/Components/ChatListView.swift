@@ -6,20 +6,6 @@
 //
 
 import SwiftUI
-
-let bbls:[MessageBubble]=[
-    MessageBubble.init(
-        id: UUID.init(),
-        message: "Hello World",
-        mine: false
-    ),
-    MessageBubble.init(
-        id: UUID.init(),
-        message: "Hello World",
-        mine: true
-    ),
-]
-
 struct ChatListView: View {
     let bubbles: [MessageBubble]
 
@@ -55,5 +41,5 @@ struct ChatListView: View {
 }
 
 #Preview {
-    ChatListView(bubbles: bbls)
+    ChatListView(bubbles: MessageBubble.dummyList(count: Int.random(in: 10...50)))
 }

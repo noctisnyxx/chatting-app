@@ -8,15 +8,13 @@
 import SwiftUI
 import Fakery
 
-let faker = Faker()
-
 struct ChatBubble: View {
     let msg:String
     let mine:Bool
     let color:Color
     var body: some View {
         Text(msg)
-            .font(.caption)
+            .font(AppConfig.Typography.messageBody)
             .multilineTextAlignment(.leading)
             .foregroundStyle(Color(.white))
             .padding(8)
